@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRADE & BRAINROT BY LIXZZ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Space+Mono:wght@400;700&display=swap');
+        
+        :root {
+            --primary: #8a2be2;
+            --secondary: #1e1e1e;
+            --accent: #00f0ff;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #0a0a0a;
+            color: #f8f8f8;
+            overflow-x: hidden;
+        }
+        
+        .title-font {
+            font-family: 'Space Mono', monospace;
+            letter-spacing: -0.03em;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+        }
+        
+        .card {
+            background: rgba(30, 30, 30, 0.7);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            border: 1px solid rgba(138, 43, 226, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(138, 43, 226, 0.5);
+            border-color: rgba(138, 43, 226, 0.5);
+        }
+        
+        .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .hero-title {
+            text-shadow: 0 0 15px rgba(138, 43, 226, 0.8);
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .floating {
+            animation: float 4s ease-in-out infinite;
+        }
+        
+        .profile-ring {
+            box-shadow: 0 0 25px var(--primary);
+        }
+        
+        .social-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            transform: scale(1.2);
+            color: var(--accent);
+        }
+        
+        .glow {
+            filter: drop-shadow(0 0 10px var(--primary));
+        }
+        
+        .cyber-border {
+            position: relative;
+        }
+        
+        .cyber-border::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 15px;
+            padding: 2px;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            -webkit-mask: 
+                linear-gradient(#fff 0 0) content-box, 
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="gradient-bg sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <img src="https://iili.io/FUPcKXe.jpg" alt="LIXZZ logo modern dengan gaya neon ungu dan cyan" class="w-10 h-10 rounded-full glow">
+                    <div class="text-2xl font-bold title-font">
+                        <span class="text-white">TRADE</span> & <span class="text-purple-400">BRAINROT</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#about" class="nav-link text-white hover:text-cyan-300 transition">Profile</a>
+                    <a href="#store" class="nav-link text-white hover:text-cyan-300 transition">Group Store</a>
+                    <a href="#owner" class="nav-link text-white hover:text-cyan-300 transition">Owner</a>
+                    <a href="#contact" class="nav-link text-white hover:text-cyan-300 transition">Connect</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-white focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 space-y-3">
+                <a href="#about" class="block py-2 text-white hover:text-cyan-300">Profile</a>
+                <a href="#store" class="block py-2 text-white hover:text-cyan-300">Group Store</a>
+                <a href="#owner" class="block py-2 text-white hover:text-cyan-300">Owner</a>
+                <a href="#contact" class="block py-2 text-white hover:text-cyan-300">Connect</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0 overflow-hidden">
+            <div class="absolute inset-0 bg-black opacity-70"></div>
+            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d22f9fd8-124e-4b4c-8a4e-5dbf3a5d7303.png" alt="Futuristic cyberspace background with glowing purple and blue data streams in dark void" class="w-full h-full object-cover">
+            <div class="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black to-transparent"></div>
+        </div>
+        <div class="container mx-auto px-6 z-10 text-center">
+            <div class="flex justify-center mb-8">
+                <div class="profile-ring w-40 h-40 rounded-full overflow-hidden border-4 border-purple-500/50">
+                    <img src="https://iili.io/FUPcKXe.jpg" alt="LIXZZ official profile picture in cyberpunk style with neon glowing effects" class="w-full h-full object-cover">
+                </div>
+            </div>
+            <h1 class="hero-title text-5xl md:text-8xl font-bold mb-6 title-font leading-tight">
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-cyan-400">TRADE</span><br>
+                <span class="text-white"></span> 
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-400">BRAINROT</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto">
+                Solusi Terbaik Anda
+            </p>
+            <div class="flex justify-center space-x-6">
+                <a href="https://chat.whatsapp.com/HZvY955spir1ugZLDAYdQ3?mode=ac_t" class="px-8 py-4 bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 rounded-full font-bold text-white transition-all hover:shadow-lg hover:shadow-purple-500/30">
+                    GROUP STORE <i class="fas fa-store ml-2"></i>
+                </a>
+                <a href="https://wa.me/6285766705135" class="px-8 py-4 border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-900 hover:bg-opacity-30 rounded-full font-bold transition-all hover:shadow-lg hover:shadow-cyan-500/20">
+                    OWNER PROFILE <i class="fas fa-crown ml-2"></i>
+                </a>
+            </div>
+            <div class="mt-20 floating">
+                <a href="#about">
+                    <i class="fas fa-chevron-down text-3xl text-cyan-400 animate-bounce"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profile Section -->
+    <section id="about" class="py-20 bg-gradient-to-b from-gray-900 to-black">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center title-font">
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-cyan-400">CREATOR PROFILE</span>
+            </h2>
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/3">
+                    <div class="card p-1 cyber-border">
+                        <img src="https://iili.io/FUPcKXe.jpg" alt="LIXZZ cyberpunk portrait with augmented reality interface elements floating around" class="w-full h-auto rounded-lg">
+                    </div>
+                </div>
+                <div class="lg:w-2/3">
+                    <div class="card p-8">
+                        <div class="flex items-center mb-6">
+                            <span class="bg-gradient-to-r from-purple-600 to-cyan-600 text-white text-sm px-4 py-1 rounded-full">CREATOR</span>
+                            <span class="ml-3 text-cyan-400 text-sm"><i class="fas fa-check-circle mr-1"></i> VERIFIED</span>
+                        </div>
+                        <h3 class="text-3xl font-bold mb-4 text-white title-font">LIXZZ IDENTITY</h3>
+                        <p class="text-gray-300 mb-4 leading-relaxed">
+                            Lixzz adalah owner dari web TRADE & BRAINROT Yang berumur 17 Tahun dan Tinggal di Pulau Sumatra Yaitu Kota Jambi
+                        </p>
+                        <p class="text-gray-300 mb-6 leading-relaxed">
+                            Untuk Info Lengkap Segera Bergabung Kedalam Group WhatsApp Yang Sudah Di Sediakan
+                        </p>
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
+                            <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-4 rounded-lg text-center border border-gray-700 hover:border-cyan-400 transition">
+                                <div class="text-cyan-400 text-3xl mb-2">
+                                    <i class="fas fa-chart-candlestick"></i>
+                                </div>
+                                <h4 class="font-bold">Online Market</h4>
+                            </div>
+                            <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-4 rounded-lg text-center border border-gray-700 hover:border-purple-400 transition">
+                                <div class="text-purple-400 text-3xl mb-2">
+                                    <i class="fas fa-bolt"></i>
+                                </div>
+                                <h4 class="font-bold">Brainrot</h4>
+                            </div>
+                            <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-4 rounded-lg text-center border border-gray-700 hover:border-cyan-400 transition">
+                                <div class="text-cyan-400 text-3xl mb-2">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                                <h4 class="font-bold">Trade</h4>
+                            </div>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="#" class="social-icon text-gray-400 hover:text-cyan-400 text-xl">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-icon text-gray-400 hover:text-purple-400 text-xl">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-icon text-gray-400 hover:text-cyan-400 text-xl">
+                                <i class="fab fa-discord"></i>
+                            </a>
+                            <a href="#" class="social-icon text-gray-400 hover:text-red-400 text-xl">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Group Store Section -->
+    <section id="store" class="py-20 bg-[#0a0a0a]">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center title-font">
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-400">GROUP STORE</span>
+            </h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="card p-8 cyber-border">
+                    <div class="flex flex-col md:flex-row gap-8 items-center">
+                        <div class="md:w-1/3">
+                            <img src="https://iili.io/FUiawyN.jpg" alt="Group store merchandise showcase with cyberpunk themed apparel and accessories" class="w-full rounded-lg">
+                        </div>
+                        <div class="md:w-2/3">
+                            <h3 class="text-2xl font-bold mb-4 text-white">TRADE & BRAINROT COLLECTION</h3>
+                            <p class="text-gray-300 mb-6 leading-relaxed">
+                                Beberapa Macam Item Yang Kami Sediakan Didalam Group WhatsApp 
+                            </p>
+                            <ul class="space-y-3 mb-8">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-cyan-400 mt-1 mr-2"></i>
+                                    <span class="text-gray-300">Limited Item Brainrot/Trade</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-cyan-400 mt-1 mr-2"></i>
+                                    <span class="text-gray-300">Market All Item</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-cyan-400 mt-1 mr-2"></i>
+                                    <span class="text-gray-300">Account Roblox</span>
+                                </li>
+                            </ul>
+                            <a href="https://chat.whatsapp.com/HZvY955spir1ugZLDAYdQ3?mode=ac_t" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700 rounded-full font-bold text-white transition-all hover:shadow-lg hover:shadow-cyan-500/30">
+                                GROUP STORE <i class="fas fa-external-link-alt ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Owner Profile Section -->
+    <section id="owner" class="py-20 bg-gradient-to-b from-black to-gray-900">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center title-font">
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-cyan-400">OWNER PROFILE</span>
+            </h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="card overflow-hidden cyber-border">
+                    <div class="relative h-64">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3739cffd-a67d-458a-8628-cffc0c1034dd.png" alt="LIXZZ owner banner with neon cyberpunk cityscape and digital interface elements" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                        <div class="absolute -bottom-16 left-8">
+                            <div class="w-32 h-32 rounded-full border-4 border-cyan-500 overflow-hidden bg-black">
+                                <img src="https://iili.io/FUPcKXe.jpg" alt="Portrait of LIXZZ owner with cyberpunk augmented reality glasses and neon light reflections" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-20 pb-8 px-8">
+                        <div class="flex justify-between items-start mb-6">
+                            <div>
+                                <h3 class="text-2xl font-bold text-white">LIXZZ 🤘🏻</h3>
+                                <p class="text-cyan-400">BRAINROT OFFICER</p>
+                            </div>
+                            <div class="flex space-x-3">
+                                <a href="https://t.me/lixzzzs" class="social-icon text-gray-400 hover:text-cyan-400 text-lg">
+                                    <i class="fab fa-telegram"></i>
+                                </a>
+                                <a href="https://wa.me/6285766705135" class="social-icon text-gray-400 hover:text-purple-400 text-lg">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-6 leading-relaxed">
+                            Official Jual Beli Item Brainrot & Trade
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div>
+                                <h4 class="text-sm text-cyan-400 mb-1">SPECIALTY</h4>
+                                <p class="text-white">Online Market</p>
+                            </div>
+                            <div>
+                                <h4 class="text-sm text-purple-400 mb-1">EXPERIENCE</h4>
+                                <p class="text-white">5+ Years</p>
+                            </div>
+                        </div>
+                        <a href="#contact" class="inline-flex items-center px-6 py-3 border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-900 hover:bg-opacity-30 rounded-full font-bold transition-all hover:shadow-lg hover:shadow-cyan-500/20">
+                            KLIK TOMBOL WA/TELE UNTUK OWNER <i class="fas fa-paper-plane ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer/Connect Section -->
+    <section id="contact" class="py-12 bg-black">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="#" class="social-icon text-gray-400 hover:text-cyan-400 text-2xl">
+                    <i class="fab fa-telegram"></i>
+                </a>
+                <a href="#" class="social-icon text-gray-400 hover:text-purple-400 text-2xl">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-icon text-gray-400 hover:text-cyan-400 text-2xl">
+                    <i class="fab fa-discord"></i>
+                </a>
+                <a href="#" class="social-icon text-gray-400 hover:text-red-400 text-2xl">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+            <p class="text-gray-500 text-sm">© 2023 TRADE & BRAINROT BY LIXZZ. ALL RIGHTS RESERVED.</p>
+        </div>
+    </section>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
